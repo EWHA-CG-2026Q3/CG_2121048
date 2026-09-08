@@ -8,7 +8,11 @@ public class S03_CustomPolygonMesh_Square : MonoBehaviour
         // TODO 1: 원하는 다각형의 정점 좌표를 채우세요 (최소 4개)
         Vector3[] vertices = new Vector3[]
         {
-            // 예: new Vector3(0f, 1f, 0f),
+            new Vector3(0f, 1.5f, 0f),      // 0
+            new Vector3(1.4f, 0.5f, 0f),    // 1
+            new Vector3(0.9f, -1f, 0f),     // 2
+            new Vector3(-0.9f, -1f, 0f),    // 3
+            new Vector3(-1.4f, 0.5f, 0f),   // 4
         };
 
         // TODO 2: 정점 3개씩 묶어 삼각형들을 구성하세요
