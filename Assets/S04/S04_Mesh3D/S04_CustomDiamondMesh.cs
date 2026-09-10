@@ -20,10 +20,17 @@ public class S04_CustomDiamondMesh : MonoBehaviour
         // 힌트: 허리띠는 0→1→2→3→(다시 0) 순서로 이어짐
         int[] triangles = new int[]
         {
-            4,1,0,
-            4,2,1,
-            4,3,2,
-            4,0,3,
+             // 위쪽 4면
+            4, 1, 0,
+            4, 2, 1,
+            4, 3, 2,
+            4, 0, 3,
+
+            // 아래쪽 4면
+            5, 0, 1,
+            5, 1, 2,
+            5, 2, 3,
+            5, 3, 0,
         };
 
         Mesh mesh = new Mesh();
