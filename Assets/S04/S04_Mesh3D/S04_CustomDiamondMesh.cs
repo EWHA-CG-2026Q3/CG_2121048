@@ -22,6 +22,8 @@ public class S04_CustomDiamondMesh : MonoBehaviour
         {
             4,1,0,
             4,2,1,
+            4,3,2,
+            4,0,3,
         };
 
         Mesh mesh = new Mesh();
