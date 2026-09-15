@@ -20,7 +20,11 @@ public class S05_MyMeshRenderer : MonoBehaviour
         canvasTexture = new Texture2D(canvasWidth, canvasHeight);
         canvasTexture.filterMode = FilterMode.Point;
 
-        FillVerticalStripes(patternSize, colorA, colorB);
+        // 줄무늬 만들기
+        // FillVerticalStripes(patternSize, colorA, colorB);
+
+        // 체스판 만들기
+        FillCheckerboard(patternSize, colorA, colorB);
 
         canvasTexture.Apply();
         targetImage.texture = canvasTexture;
@@ -31,11 +35,29 @@ public class S05_MyMeshRenderer : MonoBehaviour
         for (int x = 0; x < canvasWidth; x++)
         {
             bool isColorA = (x / width) % 2 == 0;
+
             Color stripeColor = isColorA ? colorA : colorB;
 
             for (int y = 0; y < canvasHeight; y++)
             {
                 canvasTexture.SetPixel(x, y, stripeColor);
+            }
+        }
+    }
+
+    private void FillCheckerboard(int size, Color colorA, Color colorB)
+    {
+        for (int x = 0; x < canvasWidth; x++)
+        {
+            for (int y = 0; y < canvasHeight; y++)
+            {
+                bool isColorA = ((x / size) + (y / size)) % 2 == 0;
+
+                canvasTexture.SetPixel(
+                    x,
+                    y,
+                    isColorA ? colorA : colorB
+                );
             }
         }
     }
