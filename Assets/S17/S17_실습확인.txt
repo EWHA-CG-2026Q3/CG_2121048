@@ -1,6 +1,0 @@
-S17 수업 실습 결과
-1. S17_Mission_B2.unity: B2 한 칸 확대. S17_MyTexture_B2.shader의 p=uv*0.25+float2(0.25,0.5)
-2. S17_Mission_Quarter.unity: 전체 격자를 표면의 왼쪽 아래 1/4에 표시, 나머지 회색. S17_MyTexture_Quarter.shader의 p=uv*2 와 if 조건
-3. S17_Landscape.unity: 최종 과제 D3 한 칸만 확대. S17_MyTexture.shader의 p=uv*0.25+float2(0.5,0)
-교수님 원본 파일은 직접 확보하지 못하여, shader는 PPT의 S17_Texture 코드로 재현하고 격자는 PPT에 실린 이미지를 사용했습니다.
-중요: 사이버캠퍼스에는 최종 S17_Landscape의 Game view 캡처 1장 제출. 서술 4문장은 과제 안내에 필요하다고 쓰여 있으므로 별도 작성해 두었습니다.
